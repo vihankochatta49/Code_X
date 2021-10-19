@@ -1,0 +1,1201 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .boby {
+        font-family: sans-serif;
+        background-color: white;
+    }
+
+    .half {
+        padding-bottom: 150px;
+        background-color: #f5f5f5;
+    }
+
+    .v-nav-bar {
+        display: flex;
+        align-items: center;    
+        margin-bottom: 100px;
+    }
+
+    .logo {
+        padding: 10px 10px 10px 30px;
+        color: black;
+        font-size: 40px;
+    }
+
+    .list1 {
+        display: flex;
+        position: absolute;
+        right: 10px;
+    }
+
+    .li5 {
+        list-style: none;
+        display: flex;
+        font-size: 18px;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .li5:hover {
+        text-decoration: underline;
+    }
+
+    .anchor5 {
+        display: block;
+        margin-left: 3px;
+        width: 100%;
+    }
+
+    .anchor51 {
+        position: absolute;
+        right: 6%;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .fa-sun {
+        color: #e4e6eb;
+    }
+
+    .conte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 100px;
+    }
+
+    .picture {
+        margin-right: 10%;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border: 2px solid white;
+        padding: 50px 0px;
+        border-radius: 40px;
+        background-color: #9c6871;
+    }
+
+    .fa-user-circle {
+        font-size: 65px;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .fa-fire {
+        color: #005792;
+    }
+
+    .log {
+        font-size: 15px;
+        width: 80%;
+        border: none;
+        background-color: #f9ced5;
+        opacity: 0.6;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+    }
+
+    .log:hover {
+        border-radius: 10px;
+        opacity: 1;
+    }
+
+    .login-btn {
+        text-decoration: none;
+        background-color: #a26570;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        border: 3px solid white;
+        border-radius: 10px;
+    }
+
+    .select {
+        display: none;
+    }
+
+    .side-nav {
+        padding: 10px 0px 10px 10px;
+        height: 100%;
+        width: 200px;
+        background-color: #F9F9F3;
+        position: fixed;
+    }
+
+    .list {
+        height: 85%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .li {
+        list-style: none;
+        padding: 10px;
+        font-family: sans-serif;
+        color: #005792;
+        font-size: 1rem;
+        opacity: 0.74;
+        cursor: pointer;
+    }
+
+    .li:hover {
+        color: black;
+        opacity: 1;
+    }
+
+    .design {
+        color: black;
+        border-left: 2px solid #00204a;
+        opacity: 1;
+    }
+    
+    .head {
+        text-align: center;
+        font-size: 25px;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #005792;
+    }
+
+    .li2 {
+        list-style: none;
+        padding: 10px;
+        font-family: monospace;
+        color: #1f4068;
+        font-size: 20px;
+    }
+
+    .active-element {
+        position: absolute;
+        left: 250px;
+        right: 250px;
+    }
+
+    .set {
+        border: 2px solid white;
+        border-radius: 20px;
+        background-color: #f5f5f5;
+        padding: 15px 150px 30px 25px;
+        margin: 20px 0px;
+    }
+
+    .explain {
+        font-family: cursive;
+        font-size: 22px;
+        color: #005792;
+        padding: 10px 0px;
+    }
+
+    .about {
+        padding: 10px 0px;
+        line-height: 1.5;
+        font-size: 1.15rem;
+    }
+
+    .anchor {
+        padding: 10px;
+        font-size: 20px;
+        background-color: #FFE381;
+        font-family: monospace;
+        border-radius: 5px;
+        border: 2px solid white;
+        text-decoration: none;
+        color: black;
+    }
+
+    .anchor:hover {
+        background-color: #fddb3a !important;
+    }
+
+    .code {
+        margin-top: 15px;
+        background-color: #a38089;
+        padding: 0px 15px;
+        color: white;
+    }
+
+    .syntax {
+        font-size: 25px;
+        padding: 10px 0px;
+    }
+
+    .foot {
+        display: flex;
+    }
+
+    .lick {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        background-color: #f4f5f7;
+    }
+    
+    .lik {
+        font-size: 15px;
+        opacity: 0.85;
+        margin: 10px;
+    }
+
+    .links {
+        background-color: #f4f5f7;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .link {
+        font-size: 20px;
+        opacity: 0.85;
+        margin: 10px;
+    }
+
+    .disappear {
+        display: none;
+    }
+
+    .para {
+        color: #E99557;
+        font-weight: bold;
+    }
+
+    .burger {
+        position: absolute;
+        right: 8px;
+        flex-direction: column;
+        display: none;
+    }
+
+    .burger1 {
+        position: absolute;
+        right: 8px;
+        flex-direction: column;
+        display: none;
+    }
+
+    .line {
+        width: 33px;
+        height: 4px;
+        margin: 2px 5px;
+        background-color: black;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    .bc {
+        background-color: #242526 !important;
+    }
+    .tc {
+        color: #e4e6eb;
+    }
+    .lc {
+        background-color: #e4e6eb;
+    }
+    .sc {
+        background-color: #343b3c !important;
+    }
+    .hc {
+        color: #ffb423;
+    }
+    .wc {
+        background-color: white;
+    }
+    .fc{
+        color: #effbff;
+    }
+    .wtc {
+        color: white;
+    }
+    .cc {
+        color: white;
+        background-color: #242526 !important;
+    }
+    .boc {
+        border-left: 2px solid white
+    }
+
+    @media screen and (max-width: 640px) {
+
+        .logo {
+            padding: 10px;
+        }
+
+        .logo1 {
+            position: absolute;
+            left: 8px;
+            top: 10px;
+        }
+
+        .burger {
+            display: flex;
+        }
+
+        .burger1 {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .v-nav-bar {
+            margin-bottom: 45px;
+        }
+
+        .list1 {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            z-index: 100;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #a26570;
+        }
+
+        .wow {
+            display: flex;
+        }
+
+        .wow1 {
+            display: block !important;
+            z-index: 500;
+        }
+
+        .gayab {
+            display: none;
+        }
+
+        .conte {
+            flex-direction: column;
+            padding: 0px;
+        }
+        
+        .picture {
+            width: 80%;
+            margin-right: 0px;
+            margin-bottom: 45px;
+        }
+
+        .login {
+            width: 80%;
+        }
+
+        .side-nav {
+            display: none;
+        }
+
+        .active-element {
+            left: 5px;
+            right: 5px;
+            top: 25px;
+        }
+
+        .set {
+            padding: 25px;
+            margin: 35px 5px;
+        }
+
+        .fa-times {
+            height: 100%;
+            position: absolute;
+            right: 8px;
+            top: 10px;
+        }
+
+        .top-bar {
+            position: fixed;
+            width: 100%;
+            height: 45px;
+            background-color: white;
+            z-index: 1050;
+            display: block;
+
+        }
+
+        .head {
+            margin-top: 45px;
+            font-family: monospace;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        .syntax {
+            font-size: 1rem;
+        }
+
+        .explain {
+            font-family: monospace;
+        }
+
+        .rsc {
+            background-color: #343b3c !important;
+        }
+
+    }
+
+</style>
+
+<body class="boby">
+
+    <div class="half"> <!--front page (login and menu)-->
+        <nav class="v-nav-bar"> <!--top nav bar-->
+            <h2 class="logo">CodeX</h2>
+            <a onclick = 'darkFunction()' class="anchor51"><i class="fas fa-moon" id='moon'></i></a>
+            <ul class="list1">
+                <li class="li5"><i class="fab fa-js"></i> <a class="anchor5" onclick = "myFunction()">JS</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="conte"> <!--login and image-->
+        <img class="picture" src="https://media.istockphoto.com/vectors/robotics-courses-for-children-concept-robots-designing-programming-vector-id1220082088?k=20&m=1220082088&s=612x612&w=0&h=UwY0CZgkdxfoZrgJVUQIaJwjGZsGV4uSYXXX1q6uDLk=">
+        <div class="login"> <!--login-->
+            <i class="fas fa-user-circle"></i>
+            <input type="email" placeholder="Email ID" class="log">
+            <input type="password" placeholder="Password" class="log">
+            <a class="login-btn">Login</a>
+        </div>
+        </div>
+    </div>
+
+        <footer class="fo"> <!--footer links-->
+            <div class="foot">
+            <div class="lick">
+                <p class="lik">Privacy</p>
+                <p class="lik">About</p>
+            </div>
+            <div class="links"> <!--social media links-->
+                <p class="link"><i class="fab fa-instagram"></i></p>
+                <p class="link"><i class="fab fa-facebook-f"></i></p>
+                <p class="link"><i class="fab fa-twitter"></i></p>
+            </div>
+            </div>
+        </footer>
+
+    <section class="intro select" id="sample"> <!--content-->
+
+        <div class="top-bar"> <!--bar for small screens-->
+
+        <h2 class="logo1" onclick="myFunction()">CodeX</h2>
+        
+        <i class="fas fa-times gayab" style="font-size: 35px; margin-right: 10px;"></i>
+        <div class="burger1">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        </div>
+
+        <nav class="side-nav"> <!--side bar for nav-->
+            <h1 class="head">HTML DOM</h1>
+            <ul class="list"> <!--dom list-->
+                <li class="li2 li" onclick="var temp = hisFunction(); functionX(0); return temp;">DOM DOCUMENT</li>
+                <li class="design li" onclick="var temp = hisFunction(); functionX(1); return temp;">activeElement</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(2); return temp;">addEventListener</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(3); return temp;">anchors</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(4); return temp;">adoptNode</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(5); return temp;">baseURI</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(6); return temp;">body</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(7); return temp;">documentElement</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(8); return temp;">write()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(9); return temp;">open()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(10); return temp;">close()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(11); return temp;">createElement()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(12); return temp;">createTextNode()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(13); return temp;">createAttribute()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(14); return temp;">cookie</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(15); return temp;">getElementById()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(16); return temp;">getElementsByClassName()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(17); return temp;">getElementsByTagName()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(18); return temp;">querySelector()</li>
+                <li class="li" onclick="var temp = hisFunction(); functionX(19); return temp;">querySelectorAll()</li>
+            </ul>
+        </nav>
+
+        <section class="suck disappear"> <!--DOM Document-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">DOM stands for <b>Document Object Model</b>.</p>
+                    <p class="about"><i class="fas fa-fire"></i> When an HTML document is loaded in web browser, it becomes a document object.</p>
+                    <p class="about"><i class="fas fa-fire"></i> It is the data representation of the objects that comprise the structure and content of a document on the web.</p>
+                    <p class="about"><i class="fas fa-fire"></i>  It is an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.</p>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Accessing a p element with class text through DOM:</p>
+                    <a href="https://codepen.io/C_X/pen/powLoNN" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck"> <!--activeElement-->
+
+            <div class="active-element">
+
+            <div class="set">
+                <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                <p class="about">The <b>activeElement</b> property returns the currently focused element in the document.</p>
+                <p class="about"><i class="fas fa-fire"></i> Use the <b>element.focus()</b> method, to put on focus to an element.</p>
+                <p class="about"><i class="fas fa-fire"></i> To find out if the document has focus, use the <b>document.hasFocus()</b> method.</p>
+            </div>
+
+            <div class="set">
+                <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                <div class="code"><p class="syntax">document.activeElement</p></div>
+            </div>
+
+            <div class="set">
+                <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Get the currently focused element on the document:</p>
+                <a class="anchor" href="https://codepen.io/C_X/pen/XWgNYRd" target="_blank" accesskey="c" title="Press (Alt+c)"><i class="fas fa-laptop-code"></i> GET CODE</a>
+            </div>
+
+            </div>
+            
+        </section>
+
+        <section class="suck  disappear"> <!--addEventListener-->
+
+            <div class="active-element">
+            
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                        <p class="about">The <b>addEventListener()</b> method binds an event handler to the document.</p>
+                        <p class="about"><i class="fas fa-fire"></i> This method binds an event handler to the whole document, to bind event handler to a specified element use <b>element.addEventListener</b> method.</p>
+                        <p class="about"><i class="fas fa-fire"></i> Use <b>removeEventListener</b> method to remove the event handler that has been attached with the addEventListener method.</p>
+                </div>
+            
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.addEventListener(event, function)</p></div>
+                </div>
+
+                <div class="set">
+                    <h1 class="explain"><i class="fas fa-clipboard-list"></i> Parameters discription</h1>
+                    <p class="about"><i class="fas fa-fire"></i> <span class="para">event:</span> <b>Mandatory.</b> A word that specifies the name of the event.<br>
+                    <b>IMP:</b> Don't use the <b>on</b> prefix like use 'mousedown' instead of 'onmousedown'.
+                    </p>
+                    <p class="about"><i class="fas fa-fire"></i> <span class="para">function:</span> <b>Mandatory.</b> Specifies the function to run when event occur.</p>
+                </div>
+            
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustrations</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Binds a click event to the document, when user click on the document property of the box changes:</p>
+                    <a href="https://codepen.io/C_X/pen/KKqNbme" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+        
+
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:</p>
+                    <a href="https://codepen.io/C_X/pen/powNqZQ" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+            
+            </div>
+            
+        </section>
+
+        <section class="suck disappear"> <!--anchors collection-->
+
+            <div class="active-element">
+
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                        <p class="about">The <b>anchors</b> collection returns a collection of all <a> elements in the document that have a name attribute.</p>
+                        <p class="about"><i class="fas fa-fire"></i> The elements in the collection are sorted as they appear in the source code.</p>
+                </div>
+            
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.anchors</p></div>
+                </div>
+
+                <div class="set"><!--how to access?-->
+                    <h1 class="explain"><i class="fas fa-key"></i> How to access?</h1>
+                    <p class="about"><i class="fas fa-fire"></i> <span class="para">length:</span> Returns the total number of <span><</span>a<span>></span> element with name attribute in the document.</a></p>
+                    <p class="about"><i class="fas fa-fire"></i> <span class="para">[index]</span> OR <span class="para">item(index):</span> Returns the <span><</span>a<span>></span> element from the collection with secified index (starts at 0).</p>
+                    <p class="about"><i class="fas fa-fire"></i> <span class="para">namedItem('id')</span> Returns the <span><</span>a<span>></span> element from the collection with the specified id.</p>
+                </div>
+            
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Access html content of different anchors from anchors collection using different method. </p>
+                    <a href="https://codepen.io/C_X/pen/QWgvNGr" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Get the total number of <span><</span>a<span>></span> in the document.</p>
+                    <a href="https://codepen.io/C_X/pen/zYzwqeG" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Get the anchor element from the collection with the specified id.</p>
+                    <a href="https://codepen.io/C_X/pen/OJgmNKw" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div> 
+            
+            </div>
+            
+        </section>
+
+        <section class="suck disappear"> <!--adoptNode-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>adoptNode()</b> method adopts a node from another document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The adopted node can be of all node types.</p>
+                    <p class="about"><i class="fas fa-fire"></i> All the child nodes of the adopted node are also adopted.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The original node is removed from the other document.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.adoptNode(node)</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Adopt the first <span><</span>h1<span>></span> element that appears in an iframe (another document):</p>
+                    <a href="https://codepen.io/C_X/pen/bGRrvqM" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--baseURI-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">
+                        The <b>baseURI</b> property returns the base URI of the HTML document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> This property is not supported in <b>Microsoft Edge</b>.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">node.baseURI</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Get baseURI of the document:</p>
+                    <a href="https://codepen.io/C_X/pen/QWgagPm" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--body-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>body</b> property returns or sets the document's body.</p>
+                    <p class="about"><i class="fas fa-fire"></i> Returns the body element of the current document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> Onset replaces all the child elements of the existing body element with the specified content.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.body</p></div>
+                    <div class="code"><p class="syntax">document.body = content</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Change color of document</p>
+                    <a href="https://codepen.io/C_X/pen/OJgzjgQ" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--documentElement-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>documentElement</b> property returns the documentElement of the document, as an Element object.</p>
+                    <p class="about"><i class="fas fa-fire"></i> This returned object is the <span><</span>html> element for HTML document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The difference between this and the document.body property is that this property gives <span><</span>html> element while document.body property gives the <span><</span>body> element.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.documentElement</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Change background color of document:</p>
+                    <a href="https://codepen.io/C_X/pen/ExXoqYJ" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--write-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>write()</b> method writes HTML expressions or JavaScript code to a document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The write() method is mostly used for testing.</p>
+                    <p class="about"><i class="fas fa-fire"></i> If it is used after an HTML document is fully loaded, it will delete all existing content.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.write(expressions)</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Putting document.write() inside a function and it overwrite all the html when function is invoked.</p>
+                    <a href="https://codepen.io/C_X/pen/bGRaoey" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Using multiple expressions: </p>
+                    <a href="https://codepen.io/C_X/pen/GREyMMz" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--open()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about"> The <b>open()</b> method opens an output stream to collect the output from any document.write() or document.writeln() methods.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.open()</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> A simple example:</p>
+                    <a href="https://codepen.io/C_X/pen/OJgzOgX" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--close()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>close()</b> method closes the output stream previously opened with the document.open() method, and displays the collected data in this process.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.close()</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> A simple example:</p>
+                    <a href="https://codepen.io/C_X/pen/OJgzOgX" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--createElement()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>createElement()</b> method creates an Element Node with the specified name.</p>
+                    <p class="about"><i class="fas fa-fire"></i> Use innerHTML OR innerText to add text.</p>
+                    <p class="about"><i class="fas fa-fire"></i> You can also use createTextNode() method to add text.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.createElement(nodeName)</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Creating an <span><</span>h1> element:</p>
+                    <a href="https://codepen.io/C_X/pen/XWgZRLa" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    
+            <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Creating a <span><</span>h1> element inside a box.</p>
+            <a href="https://codepen.io/C_X/pen/JjJpJba" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--createTextNode()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>createTextNode()</b> method creates a Text Node with the specified text.</p>
+                    <p class="about"><i class="fas fa-fire"></i> See the illustrations below to understand how to use this method.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.createTextNode(text)</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Using createTextNode() method to add text.</p>
+                    <a href="https://codepen.io/C_X/pen/qBjxjog" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Using createTextNode() method to add text inside the box.</p>
+                    <a href="https://codepen.io/C_X/pen/ZEyryVo" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--createAttribute()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about"></p>
+                    <p class="about"><i class="fas fa-fire"></i></p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax"></p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i></p>
+                    <a href="" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--cookie-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about"></p>
+                    <p class="about"><i class="fas fa-fire"></i></p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax"></p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i></p>
+                    <a href="" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--getElementById()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>getElementById()</b> method returns the element that has the ID attribute with the specified value.</p>
+                    <p class="about"><i class="fas fa-fire"></i> This is the most used method in the HTML DOM, when you want to get or change info of an element.</p>
+                    <p class="about"><i class="fas fa-fire"></i> If the element with specified ID does not exist it returns null.</p>
+                    <p class="about"><i class="fas fa-fire"></i> An ID should be unique within a page. However, if more than one element with the specified ID exists, this method returns the first element in the source code.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.getElementById('elementID')</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Getting element content by above method:</p>
+                    <a href="https://codepen.io/C_X/pen/dyRmPXy" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Get an element by above method to add new content:</p>
+                    <a href="https://codepen.io/C_X/pen/wvemBXp" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--getElementsByClassName()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>getElementsByClassName()</b> method returns a collection of all elements in the document with the specified class name, as an array-like object.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The array-like object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
+                    <p class="about"><i class="fas fa-fire"></i> Elements are sorted in array-like object as they are in the document.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.getElementsByClassName('classname')</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> A simple illustration:</p>
+                    <a href="https://codepen.io/C_X/pen/ExXEjxj" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Changing the properties of the elements using above method:</p>
+                    <a href="https://codepen.io/C_X/pen/gORepMe" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--getElementsByTagName()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>getElementsByTagName()</b> method returns a collection of all elements in the document with the specified tag name, as an array-like object.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The array-like object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
+                    <p class="about"><i class="fas fa-fire"></i> Elements are sorted in array-like object as they are in the document.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.getElementsByTagName('tagname')</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Change the properties of h1 element in the document:</p>
+                    <a href="https://codepen.io/C_X/pen/RwgMPyJ" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Select all elements in the document using '<i class="fas fa-star-of-life"></i>':</p>
+                    <a href="https://codepen.io/C_X/pen/KKqopGw" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--querySelector()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>querySelector()</b> method returns the first element that matches a specified selector(s) in the document.</p>
+                    <p class="about"><i class="fas fa-fire"></i> This method only returns the first element that matches the specified selectors.</p>
+                    <p class="about"><i class="fas fa-fire"></i> If the selector matches an class in the document that is used several times, it returns the first matching element.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.querySelector('selector')</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> A simple illustration:</p>
+                    <a href="https://codepen.io/C_X/pen/vYZRNNQ" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section class="suck disappear"> <!--querySelectorAll()-->
+
+            <div class="active-element">
+        
+                <div class="set"><!--Exlanation-->
+                    <h1 class="explain"><i class="fas fa-chalkboard-teacher"></i> Explanation</h1>
+                    <p class="about">The <b>querySelectorAll()</b> method returns all elements in the document that matches a specified selector(s), as a static NodeList object.</p>
+                    <p class="about"><i class="fas fa-fire"></i> The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
+                </div>
+        
+                <div class="set"><!--Syntax-->
+                    <h1 class="explain"><i class="fas fa-code"></i> Syntax</h1>
+                    <div class="code"><p class="syntax">document.querySelectorAll('selector')</p></div>
+                </div>
+        
+                <div class="set"><!--Illustration-->
+                    <h1 class="explain"><i class="fas fa-edit"></i> Illustration</h1>
+                    <p class="about" style="margin-bottom: 15px;"><i class="fas fa-fire"></i> Get the total number of element with same css selector:</p>
+                    <a href="https://codepen.io/C_X/pen/yLXKYzb" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+                    <p class="about" style="margin-bottom: 15px; margin-top: 35px;"><i class="fas fa-fire"></i> Add a class to all the elements:</p>
+                    <a href="https://codepen.io/C_X/pen/MWoVaro" class="anchor" target="_blank"><i class="fas fa-laptop-code"></i> GET CODE</a>
+
+                </div>
+        
+            </div>
+        
+        </section>
+
+    </section>
+
+    <script> //disappear front page
+        var Intro = document.querySelector('.intro');
+        var Front = document.querySelector('.half');
+        var Foo = document.querySelector('.fo');
+        function myFunction() {
+            Foo.classList.toggle('select');
+            Intro.classList.toggle('select');
+            Front.classList.toggle('select');
+        }
+
+    </script>
+
+    <script>//dark mode
+    function darkFunction() {
+        var moon = document.querySelector('#moon');
+        if(moon.attributes[0].value == 'fas fa-moon') {
+            moon.classList.remove('fas', 'fa-moon');
+            moon.classList.add('fas', 'fa-sun');
+        }else {
+            moon.classList.remove('fas', 'fa-sun');
+            moon.classList.add('fas', 'fa-moon');
+        }
+        document.querySelector('.half').classList.toggle('bc');
+        document.querySelector('.logo').classList.toggle('tc');
+        document.querySelectorAll('.li5').forEach(li5=>{li5.classList.toggle('tc')});
+        document.querySelector('.login').classList.toggle('sc');
+        document.querySelectorAll('.log').forEach(log=>{log.classList.toggle('wc')});
+        document.querySelector('.login-btn').classList.toggle('sc');
+        document.querySelector('.lick').classList.toggle('sc');
+        document.querySelectorAll('.lik').forEach(lik=>{lik.classList.toggle('tc')});
+        document.querySelector('.links').classList.toggle('sc');
+        document.querySelectorAll('.link').forEach(link=>{link.classList.toggle('tc')});
+        document.querySelector('.side-nav').classList.toggle('sc');
+        document.querySelectorAll('.li').forEach(li=>{li.classList.toggle('fc')});
+        document.querySelectorAll('.about').forEach(about=>{about.classList.toggle('wtc')});
+        document.querySelectorAll('.fa-fire').forEach(faFire=>{faFire.classList.toggle('hc')});
+        document.querySelectorAll('.code').forEach(code=>{code.classList.toggle('bc')});
+        document.querySelector('.head').classList.toggle('hc');
+        document.querySelector('.li2').classList.toggle('hc');
+        document.querySelectorAll('.set').forEach(set=>{set.classList.toggle('sc')});
+        document.querySelectorAll('.explain').forEach(explain=>{explain.classList.toggle('hc')});
+        document.querySelectorAll('.anchor').forEach(anchor=>{anchor.classList.toggle('cc')});
+        document.querySelector('.boby').classList.toggle('bc');
+        document.querySelector('.list1').classList.toggle('rsc');
+        document.querySelector('.logo1').classList.toggle('tc');
+        document.querySelectorAll('.line').forEach(line=>{line.classList.toggle('lc')});
+        document.querySelector('.top-bar').classList.toggle('bc');
+        document.querySelector('.fa-times').classList.toggle('tc');
+    }
+    </script>
+
+    <script> // script for side nav bar of html dom
+        function hisFunction() {
+            var all = document.querySelectorAll('.suck');
+            for(let i=0; i<all.length; i++) {
+                if(!all[i].classList.contains('disappear')) {
+                all[i].classList.add('disappear');
+            }
+            }
+
+            document.querySelectorAll('.li').forEach(li => {li.classList.remove('design');});
+            if(moon.attributes[0].value == 'fas fa-sun') {
+                document.querySelectorAll('.li').forEach(li => {li.classList.remove('boc');});
+            }
+         }
+
+         function functionX(x) {
+            document.querySelectorAll('.suck')[x].classList.toggle('disappear');   
+            document.querySelectorAll('.li')[x].classList.toggle('design');
+            document.querySelector('.side-nav').classList.toggle('wow1');
+            document.querySelector('.fa-times').classList.toggle('gayab');
+            document.querySelector('.burger1').classList.toggle('gayab');
+
+            if(moon.attributes[0].value == 'fas fa-sun') {
+                document.querySelectorAll('.li')[x].classList.toggle('boc');
+            }
+ }
+    </script>
+
+    <script> // burgers script
+        var Burger = document.querySelector('.burger');
+        Burger.addEventListener('click', () => {
+            document.querySelector('.list1').classList.toggle('wow');
+        })
+
+        var burgerOne = document.querySelector('.burger1');
+        burgerOne.addEventListener('click', () => {
+            document.querySelector('.side-nav').classList.toggle('wow1');
+            document.querySelector('.fa-times').classList.toggle('gayab');
+            burgerOne.classList.toggle('gayab');
+        })
+
+        var cross = document.querySelector('.fa-times');
+        cross.addEventListener('click', () => {
+            document.querySelector('.side-nav').classList.toggle('wow1');
+            document.querySelector('.fa-times').classList.toggle('gayab');
+            burgerOne.classList.toggle('gayab');
+        });
+    </script>
+
+    
+</body>
